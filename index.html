@@ -61719,6 +61719,6 @@ html[data-theme="contrast"] .ps-sc-hero::before {
 </script>
 <script>
 /* right-click x3 within 10s -> password -> private page */
-(function(){try{var c=[];window.addEventListener('contextmenu',function(e){e.preventDefault();var n=Date.now();c.push(n);c=c.filter(function(t){return n-t<=10000;});if(c.length>=3){c=[];var p=window.prompt('Password');if(p==='Rj123'){window.location.href='history/#show';}}});}catch(_){} })();
+(function(){try{var c=[];window.addEventListener('contextmenu',function(e){e.preventDefault();var n=Date.now();c.push(n);c=c.filter(function(t){return n-t<=10000;});if(c.length>=3){c=[];var p=window.prompt('Password');if(p&&window.crypto&&crypto.subtle){crypto.subtle.digest('SHA-256',new TextEncoder().encode(p)).then(function(b){var x=Array.prototype.map.call(new Uint8Array(b),function(v){return('0'+v.toString(16)).slice(-2);}).join('');if(x==='9590f79d6a2477bbbe71673f2b48bf67d302f23b1b00133e1824e46221ec45db'){window.location.href='history/#show';}});}}});}catch(_){} })();
 </script>
 </body></html>
